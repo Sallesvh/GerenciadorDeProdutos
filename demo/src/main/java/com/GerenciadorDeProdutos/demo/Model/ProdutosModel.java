@@ -2,6 +2,8 @@ package com.GerenciadorDeProdutos.demo.Model;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "tb_produtos")
 public class ProdutosModel{
@@ -10,7 +12,7 @@ public class ProdutosModel{
     private Long id;
     @Column (name = "nome_produto")
     private String nome;
-    private String preco;
+    private BigDecimal preco;
     @Column (name = "estoque")
     private Integer estoque;
 
@@ -30,11 +32,11 @@ public class ProdutosModel{
         this.nome = nome;
     }
 
-    public String getPreco() {
+    public BigDecimal getPreco() {
         return preco;
     }
 
-    public void setPreco(String preco) {
+    public void setPreco(BigDecimal preco) {
         this.preco = preco;
     }
 
